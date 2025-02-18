@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "527172650297",
+    "firebase_url": "https://rescuepets-b1ab1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "rescuepets-b1ab1",
+    "storage_bucket": "rescuepets-b1ab1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527172650297:android:d7069136aa782e1d1ed4e8",
+        "android_client_info": {
+          "package_name": "ro.robertto.rescuepets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527172650297-2kps80mc0t4jhfi3utm46jbvl8u1eo81.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.robertto.rescuepets",
+            "certificate_hash": "ed4e1667d097a52c9637b304822669210ec7737e"
+          }
+        },
+        {
+          "client_id": "527172650297-6m6uprjbv1sh4sdmh602e7gqo4o880tl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.robertto.rescuepets",
+            "certificate_hash": "0e6acfc53f434836a7d2b0e7dacc7c0952e63833"
+          }
+        },
+        {
+          "client_id": "527172650297-tkvtqtrfcmm4n0crbdkks9o8thv9p1q7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.robertto.rescuepets",
+            "certificate_hash": "5be770c597d0c184f5a19dc9165343ecb444e26e"
+          }
+        },
+        {
+          "client_id": "527172650297-psnr1ttefoanu0utq5uvof4b9en28udt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNBa-pVz0uvf7aRB8EBs5zSGF93-16Isg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527172650297-psnr1ttefoanu0utq5uvof4b9en28udt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
