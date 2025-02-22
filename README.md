@@ -51,3 +51,15 @@ Proiectul pune accent pe un design modern și prietenos (Material Design), pe se
 
 - **Mentenabilitate**  
   Codul trebuie să fie organizat pe principii solide (MVVM, repository pattern, dependency injection etc.) pentru a facilita întreținerea și actualizările ulterioare.
+
+## Demo al aplicației
+Puteți vizualiza live demo-ul aplicației aici: [Demo RescuePets](https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB)
+
+## Diagrama bazei de date
+### Diagrama Entitate-Relație (ERD)
+![image](https://github.com/user-attachments/assets/80e9233c-34eb-4b84-84d2-3a8378e855aa)
+
+### Diagrama Conceptuală
+![image](https://github.com/user-attachments/assets/0a29c489-07a9-4ba7-9560-7e1eedf95b09)
+
+## 
