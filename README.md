@@ -55,6 +55,10 @@ Proiectul pune accent pe un design modern și prietenos (Material Design), pe se
 ## Demo al aplicației
 Puteți vizualiza live demo-ul aplicației aici: [Demo RescuePets](https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB)
 
+Sau dacă apasați pe imaginea de mai jos:
+<a href="https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB" target="_blank"><img src="![image](https://github.com/user-attachments/assets/0b9b78ff-2009-41a9-8520-8f511a1e5483)
+" alt="Video - Traffic lights for a crosswalk" width="480" height="360" border="10"></a>
+
 ## Diagrama bazei de date
 ### Diagrama Entitate-Relație (ERD)
 ![image](https://github.com/user-attachments/assets/80e9233c-34eb-4b84-84d2-3a8378e855aa)
