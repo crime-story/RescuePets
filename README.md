@@ -392,3 +392,57 @@ public final class LocalDataSource extends RescuePetsLocalRepository {
 Am utilizat design pattern-ul Singleton pentru a asigura existența unei singure instanțe a bazei de date locale Room, cu scopul de a economisi resurse și de a menține consistența datelor. În clasa `LocalDataSource`, se obține instanța singleton a clasei `AppDatabase`, iar prin intermediul `RescuePetsDao` sunt efectuate operațiile de inserare și căutare în baza de date.
 
 Acest pattern garantează utilizarea eficientă a resurselor și gestionarea corectă a accesului la baza de date locală, prevenind crearea multiplă a instanței bazei de date și evitând problemele de acces concurent.
+
+Implementarea clasei AppDatabase:
+
+```java
+@Database( entities = { User.class, Center.class, Address.class, Employee.class, BankInfo.class, Pet.class, AdoptionForm.class }, version = 1 )
+abstract class AppDatabase extends RoomDatabase {
+    private static volatile AppDatabase INSTANCE;
+    private static final int NUMBER_OF_THREADS = 4;
+    protected static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool( NUMBER_OF_THREADS );
+
+    AppDatabase() {
+        super();
+    }
+
+    protected abstract LocalDataSource.RescuePetsDao rescuePetsDao();
+
+    protected static AppDatabase getAppDatabase( final Context context ) {
+        synchronized ( AppDatabase.class ) {
+            if ( INSTANCE == null ) {
+                INSTANCE = Room.databaseBuilder( context.getApplicationContext(),
+                                AppDatabase.class,
+                                "rescuepets-db" )
+                        .build();
+            }
+            return INSTANCE;
+        }
+    }
+}
+```
+
+Implementarea clasei LocalDataSource:
+
+```java
+public final class LocalDataSource extends RescuePetsLocalRepository {
+    final RescuePetsDao rescuePetsDao;
+
+    public LocalDataSource( Context context ) {
+        super( context );
+        rescuePetsDao = AppDatabase.getAppDatabase( context ).rescuePetsDao();
+    }
+
+    @Override
+    protected void insertAddress( Address address ) {
+        AppDatabase.databaseWriteExecutor.execute( () -> {
+            try {
+                rescuePetsDao.insertAddress( address );
+            } catch ( Exception e ) {
+                Timber.e( e );
+            }
+        } );
+    }
+  // restul codului..
+}
+```
