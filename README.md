@@ -60,6 +60,7 @@ Sau dacă apasați pe imaginea de mai jos:
 
 [![Video - Demo RescuePets](https://github.com/user-attachments/assets/0b9b78ff-2009-41a9-8520-8f511a1e5483)](https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB)
 
+## Implementarea backendului
 Pentru a implementa design pattern-ul **MVVM – Model-View-ViewModel with Clean Architecture**, backendul aplicației RescuePets a fost structurat în trei layere distincte, ceea ce asigură testabilitatea, decuplarea componentelor și scalabilitatea codului.
 
 ### Structura Backendului
