@@ -446,3 +446,12 @@ public final class LocalDataSource extends RescuePetsLocalRepository {
   // restul codului..
 }
 ```
+
+### Dependency Injection - Dagger Pattern
+Clasa `RescuePetsMediator` are rolul de a realiza sincronizarea dintre baza de date locală și cea online. Această clasă este instanțiată de `DependencyProvider` prin **Dagger** și primește ca parametri în constructor repository-ul local (`RescuePetsLocalRepository`) și worker-ul (`WorkerManager`).
+
+Pentru a impune utilizarea continuă a Dagger-ului și pentru a preveni instanțierea clasei într-un alt mod, cei doi parametri joacă un rol important în aplicarea acestui **design pattern**. De exemplu, dacă cineva încearcă să creeze o instanță a mediatorului în afara pachetului `domain`, acest lucru va fi imposibil deoarece clasa nu este accesibilă în `presentation`.
+
+`RescuePetsDependencyProvider` are un constructor public care primește ca parametru contextul aplicației și instanțiază repository-ul pentru baza de date locală, mediatorul și use-case-urile. Prin adnotarea `@Provides` a metodei `providePetsUseCase()`, care returnează o instanță a clasei `PetsUseCase`, este implementat conceptul de **Dagger**.
+
+Acest mecanism contribuie la o organizare mai bună a codului și gestionează eficient dependențele aplicației, fiind un element crucial în arhitectura acesteia.
