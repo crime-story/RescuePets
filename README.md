@@ -482,3 +482,12 @@ public final class RescuePetsDependencyProviderModule {
     }
 }
 ```
+
+### Adapter Pattern
+Am folosit Adapter Pattern pentru a gestiona afișarea dinamică a mesajelor într-un RecyclerView prin clasa `MessagesAdapter`. Acest pattern permite separarea logicii de afișare a interfeței utilizatorului de logica gestionării datelor, facilitând reutilizarea și optimizarea performanței aplicației.
+
+Clasa `MessagesAdapter` este responsabilă pentru conversia listei de mesaje (`ArrayList<Message>`) într-un format compatibil cu **RecyclerView**. Aceasta determină tipul fiecărui mesaj prin `getItemViewType()`, afișându-l corespunzător ca **mesaj trimis** (`SentMsgHolder`) sau mesaj primit (`ReceiveMsgHolder`).
+
+RecyclerView utilizează **ViewHolder Pattern** pentru a optimiza afișarea și a reduce consumul de resurse, asigurând reciclarea și refolosirea itemilor din listă.
+
+Prin utilizarea acestui model, aplicația beneficiază de o gestionare eficientă a mesajelor, îmbunătățind performanța și scalabilitatea aplicației.
