@@ -62,4 +62,29 @@ Puteți vizualiza live demo-ul aplicației aici: [Demo RescuePets](https://youtu
 ### Diagrama Conceptuală
 ![image](https://github.com/user-attachments/assets/0a29c489-07a9-4ba7-9560-7e1eedf95b09)
 
-## 
+## Diagrama Use-Case
+Diagrama generală a proiectului
+![](./diagrame/UseCaseDiagram.png)
+
+## Diagrama de flux
+### Diagrama de flux pentru procesul de autentificare, înregistrare, resetare parolă
+![](./diagrame/AuthFlow.png)
+
+### Diagrama de flux general al aplicației
+![](./diagrame/GeneralFlow.png)
+
+## Diagrama de clase
+Diagrama de clase pentru modelele din baza de date reprezintă structura entităților, atributele acestora și relațiile dintre ele. Fiecare clasă corespunde unui tabel din baza de date, având atribute (coloane) și asocieri (chei externe). Aceasta ajută la înțelegerea arhitecturii bazei de date și a conexiunilor dintre entități.
+![](./diagrame/ClassDiagram.png)
+
+## Diagrama de obiecte
+Diagrama de obiecte este o instanțiere a diagramei de clase, reprezentând obiectele concrete și valorile atributelor lor la un moment dat. Aceasta oferă o imagine detaliată a modului în care datele sunt stocate și interconectate în timpul execuției aplicației.
+Pe baza diagramei pe care ai furnizat-o, diagrama de obiecte prezintă instanțele efective ale entităților precum Center, Pet, User, Employee și AdoptionForm, cu valori specifice pentru fiecare atribut. Obiectele sunt conectate între ele conform relațiilor definite în diagrama de clase, de exemplu:
+- Un centru de adopție (Center) are mai multe animale (Pet) asociate.
+- Un utilizator (User) și un angajat (Employee) sunt legați de formularele de adopție (AdoptionForm).
+- Fiecare formular de adopție conține referințe la animalul adoptat, utilizatorul care adoptă și angajatul care procesează cererea.
+![](./diagrame/ObjectDiagram.png)
+
+## Sequence Diagram
+Diagrama de secvență prezintă pașii procesului de adopție, evidențiind interacțiunea dintre utilizator, sistem, baza de date și angajați. Utilizatorul trimite o cerere, sistemul o stochează și notifică angajatul, care verifică datele și decide aprobarea sau respingerea. Dacă este aprobată, se programează o vizită, iar după finalizare, adopția este completată și utilizatorul primește instrucțiuni post-adopție.
+![](./diagrame/SequenceDiagram.png)
