@@ -100,6 +100,6 @@ Pe baza diagramei pe care ai furnizat-o, diagrama de obiecte prezintă instanțe
 ## Sequence Diagram
 Diagrama de secvență prezintă pașii procesului de adopție, evidențiind interacțiunea dintre utilizator, sistem, baza de date și angajați. Utilizatorul trimite o cerere, sistemul o stochează și notifică angajatul, care verifică datele și decide aprobarea sau respingerea. Dacă este aprobată, se programează o vizită, iar după finalizare, adopția este completată și utilizatorul primește instrucțiuni post-adopție.
 
-## Design patterns
-
 ![](./Diagrame/SequenceDiagram.png)
+
+## Design patterns
