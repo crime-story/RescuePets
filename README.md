@@ -60,6 +60,40 @@ Sau dacă apasați pe imaginea de mai jos:
 
 [![Video - Demo RescuePets](https://github.com/user-attachments/assets/0b9b78ff-2009-41a9-8520-8f511a1e5483)](https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB)
 
+Pentru a implementa design pattern-ul **MVVM – Model-View-ViewModel with Clean Architecture**, backendul aplicației RescuePets a fost structurat în trei layere distincte, ceea ce asigură testabilitatea, decuplarea componentelor și scalabilitatea codului.
+
+### Structura Backendului
+
+- **Data**  
+  - *Subpachetul `pojo`*: conține entitățile definite în diagrama conceptuală.  
+  - *Subpachetul `source`*: gestionează logica CRUD pentru baza de date locală (Room) și baza de date online (Firebase) și sincronizarea între ele.
+
+- **Domain**  
+  - Responsabil pentru logica aplicației și pentru comunicarea între interfața grafică și bazele de date.  
+  - Aici se preia controlul asupra datelor pentru procesare.
+
+- **Presentation**  
+  - Conține clasa `RescuePetsApplication`, responsabilă de inițializarea și injectarea dependințelor prin Dagger.
+
+### Sincronizarea Datelor și Operațiile CRUD
+
+- Pentru a facilita comunicarea între baza de date locală (Room) și cea online (Firebase), query-urile de citire sunt incapsulate în obiecte de tip **LiveData**, asigurând actualizări asincrone ale interfeței.
+- Clasa `RescuePetsMediator` se ocupă de sincronizarea datelor, fiind instanțiată prin Dagger și utilizând:
+  - Un repository local (`RescuePetsLocalRepository`) pentru operațiuni pe baza de date Room.
+  - Un worker (`WorkerManager`) care procesează operațiile CRUD pe un fir de execuție separat, folosind o coadă sigură (Thread Safe Queue).
+
+### Managementul Dependințelor
+
+- **Dagger** este utilizat pentru injectarea dependințelor, prin intermediul clasei `RescuePetsDependencyProvider`, care:
+  - Inițializează repository-urile, mediatorul și use-case-urile.
+  - Utilizează metode marcate cu `@Provides` pentru a organiza și gestiona corect dependențele aplicației.
+
+### Alte Aspecte Tehnice
+
+- Pentru operațiile de inserare (POST) și actualizare (PUT), se generează un UID unic pentru fiecare obiect, asigurând astfel integritatea datelor și prevenind problemele de sincronizare.
+- Clasa `RescuePetsPojo` din pachetul **data-pojo** implementează interfața `Serializable` și permite setarea UID-ului după confirmarea operației de POST în Firebase.
+- Clasa `PetUseCase` oferă o interfață abstractă pentru manipularea datelor, contribuind la modularitatea și organizarea codului.
+
 ## Diagrama bazei de date
 ### Diagrama Entitate-Relație (ERD)
 ![image](https://github.com/user-attachments/assets/80e9233c-34eb-4b84-84d2-3a8378e855aa)
