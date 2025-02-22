@@ -65,7 +65,7 @@ Puteți vizualiza live demo-ul aplicației aici: [Demo RescuePets](https://youtu
 ## Diagrama Use-Case
 Diagrama generală a proiectului
 
-![](./diagrame/UseCaseDiagram.png)
+![](./Diagrame/UseCaseDiagram.png)
 
 ## Diagrama de flux
 ### Diagrama de flux pentru procesul de autentificare, înregistrare, resetare parolă
