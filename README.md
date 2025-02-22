@@ -56,6 +56,7 @@ Proiectul pune accent pe un design modern și prietenos (Material Design), pe se
 Puteți vizualiza live demo-ul aplicației aici: [Demo RescuePets](https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB)
 
 Sau dacă apasați pe imaginea de mai jos:
+
 [![Video - Demo RescuePets](https://github.com/user-attachments/assets/0b9b78ff-2009-41a9-8520-8f511a1e5483)](https://youtu.be/vRH2wFSKh0k?si=2nDVV-J5v8W1W_HB)
 
 ## Diagrama bazei de date
