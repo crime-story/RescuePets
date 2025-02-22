@@ -387,3 +387,8 @@ public final class LocalDataSource extends RescuePetsLocalRepository {
     }
 }
 ```
+
+### Singleton Pattern
+Am utilizat design pattern-ul Singleton pentru a asigura existența unei singure instanțe a bazei de date locale Room, cu scopul de a economisi resurse și de a menține consistența datelor. În clasa `LocalDataSource`, se obține instanța singleton a clasei `AppDatabase`, iar prin intermediul `RescuePetsDao` sunt efectuate operațiile de inserare și căutare în baza de date.
+
+Acest pattern garantează utilizarea eficientă a resurselor și gestionarea corectă a accesului la baza de date locală, prevenind crearea multiplă a instanței bazei de date și evitând problemele de acces concurent.
