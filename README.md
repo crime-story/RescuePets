@@ -64,10 +64,15 @@ Puteți vizualiza live demo-ul aplicației aici: [Demo RescuePets](https://youtu
 
 ## Diagrama Use-Case
 Diagrama generală a proiectului
+
 ![](./diagrame/UseCaseDiagram.png)
 
 ## Diagrama de flux
 ### Diagrama de flux pentru procesul de autentificare, înregistrare, resetare parolă
+Pentru a înțelege mai bine fluxul de lucru al aplicației am realizat diagramele de flux 
+pentru procesul de autentificare, înregistrare și resetare a parole (Figura 3.7), precum și cel 
+general de utilizare al aplicației
+
 ![](./Diagrame/AuthFlow.png)
 
 ### Diagrama de flux general al aplicației
@@ -75,6 +80,7 @@ Diagrama generală a proiectului
 
 ## Diagrama de clase
 Diagrama de clase pentru modelele din baza de date reprezintă structura entităților, atributele acestora și relațiile dintre ele. Fiecare clasă corespunde unui tabel din baza de date, având atribute (coloane) și asocieri (chei externe). Aceasta ajută la înțelegerea arhitecturii bazei de date și a conexiunilor dintre entități.
+
 ![](./Diagrame/ClassDiagram.png)
 
 ## Diagrama de obiecte
@@ -83,8 +89,10 @@ Pe baza diagramei pe care ai furnizat-o, diagrama de obiecte prezintă instanțe
 - Un centru de adopție (Center) are mai multe animale (Pet) asociate.
 - Un utilizator (User) și un angajat (Employee) sunt legați de formularele de adopție (AdoptionForm).
 - Fiecare formular de adopție conține referințe la animalul adoptat, utilizatorul care adoptă și angajatul care procesează cererea.
+
 ![](./Diagrame/ObjectDiagram.png)
 
 ## Sequence Diagram
 Diagrama de secvență prezintă pașii procesului de adopție, evidențiind interacțiunea dintre utilizator, sistem, baza de date și angajați. Utilizatorul trimite o cerere, sistemul o stochează și notifică angajatul, care verifică datele și decide aprobarea sau respingerea. Dacă este aprobată, se programează o vizită, iar după finalizare, adopția este completată și utilizatorul primește instrucțiuni post-adopție.
+
 ![](./Diagrame/SequenceDiagram.png)
