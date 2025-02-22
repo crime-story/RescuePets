@@ -455,3 +455,30 @@ Pentru a impune utilizarea continuă a Dagger-ului și pentru a preveni instanț
 `RescuePetsDependencyProvider` are un constructor public care primește ca parametru contextul aplicației și instanțiază repository-ul pentru baza de date locală, mediatorul și use-case-urile. Prin adnotarea `@Provides` a metodei `providePetsUseCase()`, care returnează o instanță a clasei `PetsUseCase`, este implementat conceptul de **Dagger**.
 
 Acest mecanism contribuie la o organizare mai bună a codului și gestionează eficient dependențele aplicației, fiind un element crucial în arhitectura acesteia.
+
+Implementare RescuePetsDependencyProviderModule:
+```java
+public final class RescuePetsDependencyProviderModule {
+    private final @NonNull PetsUseCase petsUseCase;
+
+    public RescuePetsDependencyProviderModule( Application application ) {
+        RescuePetsLocalRepository rescuePetsLocalRepository = new LocalDataSource( application );
+        RescuePetsInMemoryRepository rescuePetsInMemoryRepository = new InMemoryDataSource();
+
+        WorkManager workManager1;           //necesar pt jUnitTests
+        try {
+            workManager1 = WorkManager.getInstance( application );
+        } catch ( Exception e ) {
+            workManager1 = null;
+        }
+        WorkManager workManager = workManager1;
+
+        petsUseCase = new RescuePetsMediator( rescuePetsLocalRepository, rescuePetsInMemoryRepository, workManager );
+    }
+
+    @Provides
+    public @NonNull PetsUseCase providePetsUseCase() {
+        return petsUseCase;
+    }
+}
+```
