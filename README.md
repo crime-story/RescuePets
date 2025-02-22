@@ -141,4 +141,24 @@ Diagrama de secvență prezintă pașii procesului de adopție, evidențiind int
 
 ![](./Diagrame/SequenceDiagram.png)
 
-## Design patterns
+## Design Patterns
+
+### Repository Pattern
+Repository-urile sunt clase abstracte din pachetul „domain”, care asigură proprietatea 
+de scalabilitate a aplicației. Metodele definite aici sunt folosite atât de worker, cât și de 
+mediator, care descarcă datele din baza de date online și le inserează în cea locală.
+
+Implementarea:
+```java
+public abstract class RescuePetsInMemoryRepository {
+    protected RescuePetsInMemoryRepository() {
+        super();
+    }
+
+    protected abstract void addInMemory( RescuePetsPojo obj );
+
+    protected abstract RescuePetsPojo removeInMemory( Class< ? extends RescuePetsPojo > obj );
+
+    protected abstract int getNrOfElements( Class< ? extends RescuePetsPojo > obj );
+}
+```
