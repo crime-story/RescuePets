@@ -456,7 +456,7 @@ Pentru a impune utilizarea continuă a Dagger-ului și pentru a preveni instanț
 
 Acest mecanism contribuie la o organizare mai bună a codului și gestionează eficient dependențele aplicației, fiind un element crucial în arhitectura acesteia.
 
-Implementare RescuePetsDependencyProviderModule:
+Implementarea conceptului de **Dagger** în clasa RescuePetsDependencyProviderModule:
 ```java
 public final class RescuePetsDependencyProviderModule {
     private final @NonNull PetsUseCase petsUseCase;
