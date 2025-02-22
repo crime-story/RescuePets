@@ -1,6 +1,6 @@
 # RescuePets
  
-# Cerințe Funcționale
+## Cerințe Funcționale
 
 | **Cerință**                                                                                                       | **Justificare**                                                                                                                                          |
 |-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -11,10 +11,10 @@
 | Trebuie să pot trimite cereri de programare la centrul de animale (pentru vizită/adopție)                          | Pentru a stabili data și ora vizitei în adăpost și a facilita procesul de adopție.                                                                        |
 | Trebuie să pot vedea statusul cererilor de programare (în așteptare, aprobat, respins)                             | Pentru a fi la curent cu evoluția și rezultatul solicitărilor mele.                                                                                       |
 | Trebuie să pot comunica în timp real cu un angajat (chat/asistent virtual)                                         | Pentru a primi informații și sfaturi rapide despre procesul de adopție sau îngrijirea animalelor.                                                         |
-| Trebuie să pot primi notificări despre evenimente majore (adopție, aprobare cerere, respingere cerere)            | Pentru a fi informat în timp util și a nu pierde informații importante.                                                                                   |
+| Trebuie să pot primi notificări despre evenimente majore (primire mesaj chat, adopție, aprobare cerere, respingere cerere)            | Pentru a fi informat în timp util și a nu pierde informații importante.                                                                                   |
 | Trebuie să pot posta anunțuri (în cazul în care doresc să dau spre adopție un animal)                              | Pentru a facilita găsirea unui nou stăpân și a oferi vizibilitate anunțurilor mele.                                                                        |
 | Trebuie să pot vizualiza și filtra animalele după stadiul adopției (disponibile, rezervate, adoptate)             | Pentru a înțelege rapid ce animale mai sunt disponibile sau deja au fost adoptate.                                                                        |
-| Trebuie să pot încărca și actualiza imagini cu animalele (doar pentru angajați/administratori)                    | Pentru a menține informațiile din platformă la zi și a prezenta animalele cât mai atractiv.                                                               |
+| Trebuie să pot încărca și actualiza imagini cu animalele (doar pentru angajați)                                   | Pentru a menține informațiile din platformă la zi și a prezenta animalele cât mai atractiv.                                                               |
 | Trebuie să pot aproba sau respinge cererile de programare (doar pentru angajați)                                   | Pentru a organiza vizitele și a valida cererile de adopție în mod controlat.                                                                              |
 | Trebuie să pot vedea istoricul cererilor trimise (utilizator) sau istoricul cererilor primite (angajat)           | Pentru a urmări evoluția adopțiilor și a ține evidența programărilor.                                                                                     |
 | Trebuie să pot raporta erori sau trimite feedback (pozitiv/negativ)                                               | Pentru a îmbunătăți platforma și a semnala eventuale probleme.                                                                                            |
